@@ -3,6 +3,17 @@
 ## Overview
 Slicers are interactive filtering tools in Power BI that enable users to filter other visualizations on a report page, providing an intuitive way to slice data across multiple dimensions.
 
+
+*   **Slicer Functionality**: Slicers are visual filters in Power BI that let users select specific data to display across visuals, helping narrow down the data based on chosen criteria (e.g., filtering by year or product category).
+*   **Types of Slicers**: Power BI supports various slicer types, including list slicers, dropdown slicers, date slicers, and numeric range slicers, allowing for flexible filtering options depending on the data.
+*   **Multi-Select and Single-Select Options**: Slicers can be set to allow multi-select, letting users choose multiple options at once, or single-select, limiting selection to one item at a time for focused filtering.
+*   **Hierarchical Slicers**: Hierarchical slicers allow for multiple levels (e.g., country > state > city), letting users drill down through data dimensions in a single slicer.
+*   **Sync Slicers**: Slicers can be synced across multiple report pages, so selecting an option on one page applies the filter to other relevant pages, creating a consistent filtering experience.
+*   **Formatting and Customization**: Power BI provides various formatting options for slicers, including custom colors, font styles, button shapes, and alignment, enabling slicers to match the report's design.
+*   **Searchable Slicers**: Slicers with a large list of options (e.g., countries or products) can be set to searchable mode, allowing users to type and search within the slicer for easier selection.
+*   **Responsive Slicer Layouts**: Slicers are designed to adjust and resize dynamically, making them flexible for use on different screen sizes, including mobile devices.
+
+
 ## 🎯 Slicer Types
 
 ### 1. Basic Slicers
