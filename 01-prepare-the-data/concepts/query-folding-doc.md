@@ -2,7 +2,6 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Prerequisites](#prerequisites)
 - [Key Concepts](#key-concepts)
 - [Implementation](#implementation)
 - [Best Practices](#best-practices)
@@ -14,11 +13,6 @@
 ## Overview
 Query Folding is a critical performance optimization technique in Power Query/Power BI that translates data transformation steps into native queries (like SQL) for direct execution at the data source. This process significantly improves performance by pushing computations to the source database rather than loading all data locally first.
 
-## Prerequisites
-- Basic understanding of Power Query/Power BI
-- Familiarity with data sources (especially databases)
-- Knowledge of basic SQL concepts
-- Access to Power BI Desktop or Excel with Power Query
 
 ## Key Concepts
 
@@ -148,8 +142,3 @@ Feel free to contribute to this documentation by:
 2. Suggesting improvements
 3. Adding examples
 4. Sharing best practices
-
----
-Last Updated: [Current Date]
-Author: [Your Name]
-License: MIT
