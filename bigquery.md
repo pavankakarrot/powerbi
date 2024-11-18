@@ -23,7 +23,7 @@
 <br>
 <br>
 
-## 1. Project Conversation Starter
+## Project Conversation Starter
 
 <div align="left">
 
@@ -59,7 +59,7 @@
 ---
 <br>
 
-## 2. Business Requirement Documentation
+## Business Requirement Documentation
 
 #### Objective 
 To analyze Google Ads campaign performance comprehensively by identifying key metrics, device-level insights, landing page effectiveness, and audience demographics, enabling data-driven optimization of marketing strategies.
@@ -97,7 +97,7 @@ graph TD
 ---
 <br>
 
-## 3. Data Collection
+## Data Collection
 
 Before we dive into making those fancy charts, let's make sure our data isn't playing tricks on us. Think of this as a health check-up for our data - but don't worry, no needles involved!
 
@@ -116,10 +116,10 @@ Our Tables:
 ---
 <br>
 
-## 4. Data Quality Assessment & Completeness
+## Data Quality Assessment & Completeness
 
 
-### 4.1. Record Count Analysis
+### Record Count Analysis
 
 ```sql
 -- Check daily record counts to identify missing dates or unusual patterns
@@ -159,7 +159,7 @@ ORDER BY segments_date DESC;
 <br>
 <br>
 
-### 4.2. Missing Vaules 
+### Missing Vaules 
 
 ```missing value analysis
 -- Check null percentages for critical fields
@@ -199,7 +199,7 @@ FROM field_stats;
   <br>
   
 
-### 4.3. Metric Range Analysis
+### Metric Range Analysis
 ```
 -- Check for unusual metric values
 WITH metric_stats AS (
@@ -247,7 +247,7 @@ FROM metric_stats;
 <br>
 <br>
 
-### 4.4. Outlier Detection
+### Outlier Detection
 
 ```
 -- Identify potential outliers using z-score method
@@ -304,7 +304,7 @@ ORDER BY segments_date DESC;
 <br>
 <br>
 
-### 4.5. Relationship Integrity Between Tables
+### Relationship Integrity Between Tables
 
 ```
 -- Check relationship integrity between tables
@@ -357,7 +357,7 @@ CROSS JOIN landing_page_keys l;
 <br>
 
 
-## 5. Data Model Design: Facts & Dimension Tables
+## Data Model Design: Facts & Dimension Tables
 
 #### Table Relationships Diagram
 ```mermaid
@@ -467,7 +467,7 @@ FROM `ga4powerbi-2024.GoogleAds.p_ads_LandingPageStats_5917066896`;
 <br>
 <br>
 
-## 6. Data Processing & Cleaning
+## Data Processing & Cleaning
 Ensure data integrity through validation by checking for completeness, verifying metric accuracy, and maintaining relationship integrity. Clean the data by standardizing formats, handling missing values, and fixing inconsistencies. Enhance the data by adding calculated fields, creating lookup tables, and optimizing for efficient reporting.
 
 #### Create Optimized & Cleaned Tables
@@ -524,7 +524,7 @@ WHERE is_valid_record = TRUE;
 <br>
 <br>
 
-### 7. Data Enhancement: Metrics & KPI Development
+### Data Enhancement: Metrics & KPI Development
 
 Metrics play a crucial role in standardizing analysis, ensuring consistent reporting, and enabling trend analysis. They provide actionable insights that support informed decision-making and drive campaign optimization.
 <br>
@@ -620,7 +620,7 @@ GROUP BY 1,2,3,4,5,6,7,16,17,18,19;
 END;
 ```
 
-## 8. Analysis & Reporting
+## Analysis & Reporting
 
 
-## 9. Power BI Dashboard
+## Power BI Dashboard
