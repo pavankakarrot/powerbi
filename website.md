@@ -1,4 +1,4 @@
-# Modern Portfolio Website Development: Gatsby & React Implementation
+# How I built this website in 2 weeks for FREE
 
 ## Project Overview
 > "Transformed a forked Gatsby template into a high-performance developer portfolio, implementing modern React practices and achieving 95+ PageSpeed scores."
@@ -21,24 +21,33 @@ graph LR
 > Engineered a developer portfolio by forking and extensively customizing the v4 template, implementing advanced React patterns and modern Gatsby practices, resulting in a high-performance, responsive web application.
 
 ### Core Technology Stack
-```javascript
-const techStack = {
-  frontend: {
-    frameworks: ["React", "Gatsby.js v3"],
-    styling: ["Styled Components", "CSS3"],
-    contentManagement: ["GraphQL", "Markdown"],
-  },
-  deployment: {
-    platform: "Netlify",
-    versionControl: "Git/GitHub",
-    automation: "GitHub Actions",
-  },
-  performance: {
-    bundling: "Webpack",
-    optimization: ["Code Splitting", "Lazy Loading"],
-    imageProcessing: "gatsby-plugin-sharp"
-  }
-};
+```mermaid
+graph TD
+    A[Tech Stack] --> B[Frontend]
+    A --> C[Deployment]
+    A --> D[Performance]
+
+    B --> B1[Frameworks]
+    B1 --> B1a[React]
+    B1 --> B1b[Gatsby.js v3]
+    
+    B --> B2[Styling]
+    B2 --> B2a[Styled Components]
+    B2 --> B2b[CSS3]
+    
+    B --> B3[Content Management]
+    B3 --> B3a[GraphQL]
+    B3 --> B3b[Markdown]
+
+    C --> C1[Platform: Netlify]
+    C --> C2[Version Control: Git/GitHub]
+    C --> C3[Automation: GitHub Actions]
+
+    D --> D1[Bundling: Webpack]
+    D --> D2[Optimization]
+    D2 --> D2a[Code Splitting]
+    D2 --> D2b[Lazy Loading]
+    D --> D3[Image Processing: gatsby-plugin-sharp]
 ```
 
 ### Project Architecture
