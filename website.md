@@ -3,6 +3,7 @@
 ## Project Overview
 > "Transformed a forked Gatsby template into a high-performance developer portfolio, implementing modern React practices and achieving 95+ PageSpeed scores."
 
+Developed a modern portfolio website using Gatsby/React, implementing advanced features and optimal performance (95+ Lighthouse score). Showcases data analytics projects with interactive visualizations, automated deployment via Netlify CI/CD pipeline.
 
 ### 📊 Project Metrics
 ```mermaid
