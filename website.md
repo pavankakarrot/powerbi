@@ -1,9 +1,25 @@
 # How I built this website in 2 weeks for FREE
 
-## Project Overview
+#### Table of Contents:
+1. [Project Overview](#1-project-overview)
+2. [Technology Stack](#2-technology-stack)
+3. [Primary Objectives & Achievements](#3-primary-objectives--achievements)
+4. [Challenge 1- Version Compatibility Issues](#4-challenge-1--version-compatibility-issues)
+5. [Project Structure Optimization](#5-project-structure-optimization)
+6. [Deployment Process & Implementation](#6-deployment-process--implementation)
+7. [Results & Impact](#7--results--impact)
+8. [Future Enhancements](#8-future-enhancements)
+
+<br>
+<br>
+<br>
+<br>
+
+
+## 1. Project Overview
 > "Transformed a forked Gatsby template into a high-performance developer portfolio, implementing modern React practices and achieving 95+ PageSpeed scores."
 
-Developed a modern portfolio website using Gatsby/React, implementing advanced features and optimal performance (95+ Lighthouse score). Showcases data analytics projects with interactive visualizations, automated deployment via Netlify CI/CD pipeline.
+Developed a modern portfolio website using Gatsby/React, implementing advanced features and optimal performance. Showcases data analytics projects, personalised website according to my taste, automated deployment via Netlify CI/CD pipeline.
 
 ### 📊 Project Metrics
 ```mermaid
@@ -11,13 +27,17 @@ graph LR
     A[Initial Fork] --> B[Development]
     B --> C[Deployment]
     B --> D[Testing]
-    C --> E[Performance: 95+]
-    D --> F[Coverage: 90%]
+    C --> E[Performance]
+    D --> F[Coverage]
 ```
 
-# Modern Portfolio Website Development: A Gatsby & React Transformation
+<br>
+<br>
+<br>
+<br>
 
-## 🎯 Project Overview
+
+## 2. Technology Stack
 > Engineered a developer portfolio by forking and extensively customizing the v4 template, implementing advanced React patterns and modern Gatsby practices, resulting in a high-performance, responsive web application.
 
 ### Core Technology Stack
@@ -60,14 +80,22 @@ graph TD
     F[Build Process] -->|Netlify| G[Deployment]
 ```
 
-## 🎯 Primary Objectives & Achievements
+<br>
+<br>
+<br>
+<br>
 
-### 1. Performance Optimization
+
+## 3. Primary Objectives & Achievements
+
+### 3.1 Customisation For Personal Preference
 - Implemented efficient data querying using GraphQL
-- Achieved 95+ PageSpeed scores across all metrics
-- Reduced initial load time by 40% through code splitting
+- Create projects using internal linking & delete featured projects using Github Markdown file
+- Add new section of skill set
+- Deploying using Netlify for automated deploytments
+- Use of AI for code understanding, new code Implementation & error handling.
 
-### 2. Content Management
+### 3.2 Content Management
 ```markdown
 📂 Project Structure
 content/
@@ -83,7 +111,7 @@ content/
     └── contact/
 ```
 
-### 3. Component Architecture
+### 3.3 Component Architecture
 ```javascript
 // Example of implementing section reordering
 const sections = [
@@ -105,62 +133,6 @@ const sections = [
 ].sort((a, b) => a.priority - b.priority);
 ```
 
-## 🛠️ Technical Implementation
-
-### 1. Content Integration
-```graphql
-# Example GraphQL Query for Projects
-query {
-  projects: allMarkdownRemark(
-    filter: {
-      fileAbsolutePath: { regex: "/content/projects/" }
-      frontmatter: { showInProjects: { eq: true } }
-    }
-    sort: { fields: [frontmatter___date], order: DESC }
-  ) {
-    edges {
-      node {
-        frontmatter {
-          title
-          tech
-          github
-          external
-          slug
-        }
-        html
-      }
-    }
-  }
-}
-```
-
-### 2. Responsive Design Implementation
-```javascript
-const StyledProjectsSection = styled.section`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 15px;
-  position: relative;
-  
-  @media (max-width: 1080px) {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-```
-
-## 📊 Initial Phase Metrics
-
-### Performance Improvements
-```mermaid
-pie title Load Time Distribution
-    "First Contentful Paint" : 1.2
-    "Time to Interactive" : 2.3
-    "Total Blocking Time" : 0.5
-```
 
 ### Key Achievements
 - ✅ Successfully forked and initialized local development environment
@@ -168,17 +140,15 @@ pie title Load Time Distribution
 - ✅ Established modular component architecture
 - ✅ Set up automated deployment pipeline
 
-Would you like me to continue with Part 2, which will cover:
-- Challenges faced and solutions implemented
-- Technical hurdles overcome
-- Development process optimization
-- Performance tuning strategies
 
-# Part 2: Challenges, Solutions & Technical Implementation
+<br>
+<br>
+<br>
+<br>
 
-## 🎯 Key Challenges & Solutions
 
-### 1. Version Compatibility Issues
+## 4. Challenge 1- Version Compatibility Issues
+
 ```markdown
 ### Initial Problem
 - Gatsby v3/v5 compatibility conflicts
@@ -199,7 +169,7 @@ Would you like me to continue with Part 2, which will cover:
 }
 ```
 
-### 2. GraphQL Query Structure
+### GraphQL Query Structure
 ```markdown
 ### Challenge
 - Invalid query structures
@@ -223,21 +193,14 @@ query {
 }
 ```
 
-### 3. Build Process Optimization
-```mermaid
-flowchart TD
-    A[Local Development] -->|gatsby develop| B[Testing]
-    B -->|Success| C[Build Process]
-    C -->|gatsby build| D[Production]
-    D -->|Deploy| E[Netlify]
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#bbf,stroke:#333,stroke-width:2px
-```
+<br>
+<br>
+<br>
+<br>
 
-## 🔧 Technical Deep Dive
 
-### 1. Project Structure Optimization
+## 5. Project Structure Optimization
+
 ```bash
 project-root/
 ├── src/
@@ -251,55 +214,9 @@ project-root/
 └── static/               # Static assets
 ```
 
-### 2. Component Architecture Evolution
-```javascript
-// Enhanced Project Card Component
-const ProjectCard = ({ data }) => {
-  const { frontmatter, html } = data;
-  
-  return (
-    <StyledProject>
-      <div className="project-inner">
-        {/* Project Header */}
-        <header>
-          <ProjectTitle>{frontmatter.title}</ProjectTitle>
-          
-          {/* Tech Stack */}
-          <TechList>
-            {frontmatter.tech.map((tech, i) => (
-              <TechItem key={i}>{tech}</TechItem>
-            ))}
-          </TechList>
-        </header>
 
-        {/* Project Description */}
-        <ProjectDescription 
-          dangerouslySetInnerHTML={{ __html: html }} 
-        />
-      </div>
-    </StyledProject>
-  );
-};
-```
 
-### 3. Performance Optimizations
-```typescript
-// Image Optimization Configuration
-const imageProcessingConfig = {
-  formats: ['auto', 'webp'],
-  placeholder: 'blurred',
-  quality: 90,
-  breakpoints: [750, 1080, 1366],
-  backgroundColor: 'transparent'
-};
-
-// Lazy Loading Implementation
-const LazyComponent = React.lazy(() => 
-  import('./HeavyComponent')
-);
-```
-
-## 📈 Performance Metrics
+#### Performance Metrics
 
 ### Key Performance Indicators
 | Metric | Before | After | Improvement |
@@ -308,15 +225,14 @@ const LazyComponent = React.lazy(() =>
 | First Paint | 2.0s | 1.0s | 50% ⬇️ |
 | TTI | 3.5s | 1.8s | 48% ⬇️ |
 
-Would you like me to proceed with Part 3, which will cover:
-- Deployment process
-- Final results
-- Learning outcomes
-- Future enhancements
 
-# Part 3: Deployment, Results & Future Roadmap
+<br>
+<br>
+<br>
+<br>
 
-## 🚀 Deployment Process & Implementation
+
+## 6. Deployment Process & Implementation
 
 ### 1. Netlify Integration Workflow
 ```mermaid
@@ -377,16 +293,14 @@ module.exports = {
 };
 ```
 
-## 📊 Results & Impact
+<br>
+<br>
+<br>
+<br>
 
-### Performance Metrics
-```mermaid
-pie title "Lighthouse Scores"
-    "Performance" : 95
-    "Accessibility" : 98
-    "Best Practices" : 100
-    "SEO" : 100
-```
+
+## 7.  Results & Impact
+
 
 ### Key Achievements
 ```markdown
@@ -402,25 +316,6 @@ pie title "Lighthouse Scores"
 - 🛠 Improved development experience
 ```
 
-## 🎓 Learning Outcomes
-
-### Technical Skills Enhanced
-```javascript
-const skillsGained = {
-  frameworks: {
-    gatsby: ["Component Architecture", "Plugin Ecosystem", "GraphQL Integration"],
-    react: ["Hooks", "Context API", "Performance Optimization"]
-  },
-  deployment: {
-    netlify: ["Continuous Deployment", "Build Optimization", "Environment Management"],
-    git: ["Advanced Branching", "Version Control", "Collaboration"]
-  },
-  development: {
-    tools: ["Version Management", "Debug Techniques", "Performance Monitoring"],
-    practices: ["Code Splitting", "Lazy Loading", "Progressive Enhancement"]
-  }
-};
-```
 
 ### Problem-Solving Framework
 ```mermaid
@@ -432,7 +327,14 @@ graph TD
     D -->|Review| E[Optimization]
 ```
 
-## 🔮 Future Enhancements
+
+<br>
+<br>
+<br>
+<br>
+
+
+## 8. Future Enhancements
 
 ### Planned Features
 ```markdown
@@ -449,7 +351,6 @@ graph TD
 ### Phase 3: User Experience
 - [ ] Add interactive project demos
 - [ ] Implement contact form with validation
-- [ ] Create downloadable resume version
 ```
 
 ### Future Architecture
@@ -464,22 +365,8 @@ graph TD
     style E fill:#bbf,stroke:#333
 ```
 
-## 💡 Key Takeaways
 
-### Professional Growth
-```markdown
-1. Technical Proficiency
-   - Mastered Gatsby ecosystem
-   - Enhanced React knowledge
-   - Improved debugging skills
-
-2. Project Management
-   - Efficient problem-solving
-   - Time management
-   - Documentation practices
-
-3. Best Practices
-   - Clean code principles
-   - Performance optimization
-   - Responsive design implementation
-```
+<br>
+<br>
+<br>
+<br>
