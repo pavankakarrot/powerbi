@@ -3,14 +3,14 @@
 
 ### Table of Contents:
 
-- [1. Intoduction](Introduction)
-- [2. Problem Statement And Objectives](2-problem-statement-and-objectives)
-- [3. Strategic Approach](3-strategic-approach)
-- [4. GA4 Technical Implementation](4-ga4-technical-implementation)
-- [5. Looker Studio Implementation](5-looker-studio-implementation)
-- [6. Automated Reporting System](6-automated-reporting-sysytem)
-- [7. Technical Challenges And Solutions](7-technical-challenges-and-solutions)
-- [8. Business Process Transformation](8-business-process-transformation)
+- [1. Intoduction](#Introduction)
+- [2. Problem Statement And Objectives](#2-problem-statement-and-objectives)
+- [3. Strategic Approach](#3-strategic-approach)
+- [4. GA4 Technical Implementation](#4-ga4-technical-implementation)
+- [5. Looker Studio Implementation](#5-looker-studio-implementation)
+- [6. Automated Reporting System](#6-automated-reporting-sysytem)
+- [7. Technical Challenges And Solutions](#7-technical-challenges-and-solutions)
+- [8. Business Process Transformation](#8-business-process-transformation)
 
 <br>
 <br>
