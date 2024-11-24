@@ -391,21 +391,6 @@ We create facts & dimension tables to make complex data dimple to understand, sp
 
 Combination of both tables enables efficient and flexible analysis and reporting.
 
-```mermaid
-graph TD
-    A[Campaign Stats] --> B[Daily performance metrics];
-    A --> C[Click and impression data];
-    A --> D[Cost information (Euros)];
-    A --> E[Device breakdowns];
-
-    F[Demographics] --> G[Gender insights];
-    F --> H[Age range distributions];
-    F --> I[Campaign targeting information];
-
-    J[Landing Pages] --> K[URL tracking];
-    J --> L[Domain analysis];
-    J --> M[Path information];
-```
 
 <br>
 <br>
