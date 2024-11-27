@@ -1,8 +1,13 @@
 # Navigate to your project directory
 cd DataAnalysisPortfolio/online_retail_analysis
 
-# Create and activate virtual environment
-python3 -m venv venv
+# Create a new virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# For Windows:
+venv\Scripts\activate
+# For Mac/Linux:
 source venv/bin/activate
 
 # Install required packages
