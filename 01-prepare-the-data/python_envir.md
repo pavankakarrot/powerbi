@@ -1,30 +1,23 @@
-# Navigate to your project directory
-cd DataAnalysisPortfolio/online_retail_analysis
 
-# Create a new virtual environment
-python -m venv venv
 
-# Activate the virtual environment
-# For Windows:
-venv\Scripts\activate
-# For Mac/Linux:
-source venv/bin/activate
+#### Create a new virtual environment: python3 -m venv venv
 
-# Install required packages
-pip install jupyter pandas numpy matplotlib seaborn scikit-learn plotly fsspec
+#### Activate the virtual environment
+##### For Windows: venv\Scripts\activate
+##### For Mac/Linux: source venv/bin/activate
 
-jupyter notebook
+#### Install required packages : pip install jupyter pandas numpy matplotlib seaborn scikit-learn plotly fsspec
 
-1. Exit Jupyter:
-Control + C
+#### To open notebook: jupyter notebook
+#### Exit Jupyter: Control + C
+#### To deactivate environment: deactivate
+#### For cleaning:
+rm -rf venv
+jupyter cache clear
+find . -name ".ipynb_checkpoints" -type d -exec rm -r {} +
+pip cache purge
 
-1. deactivate
-2. rm -rf venv
-3. jupyter cache clear
-4. find . -name ".ipynb_checkpoints" -type d -exec rm -r {} +
-5. pip cache purge
-
-# Import necessary libraries
+#### Import necessary libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -32,17 +25,17 @@ import seaborn as sns
 from datetime import datetime
 import warnings
 
-# Ignore warnings
+#### Ignore warnings
 warnings.filterwarnings('ignore')
 
-# Display settings
+#### Display settings
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 100)
 
-# Enable inline plotting
+#### Enable inline plotting
 %matplotlib inline
 
-# Print package versions
+#### Print package versions
 import sys
 print(f"Python version: {sys.version}")
 print(f"Pandas version: {pd.__version__}")
